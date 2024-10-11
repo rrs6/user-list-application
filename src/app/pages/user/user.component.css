@@ -1,0 +1,46 @@
+#form {
+    background-color: rgb(184, 149, 216);
+    padding: 20px 30px;
+    width: 50%;
+    margin: 0 auto;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+}
+.title {
+    text-align: center;
+    font-family: sans-serif;
+}
+.field-container {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0px;
+    color: white;
+    font-weight: 600;
+    font-family: sans-serif;
+}
+.inpt-field, .select-inpt{
+    background-color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 10px;
+    font-size: 16px;
+}
+.btn {
+    color: white;
+    background-color: green;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all ease-in 0.15s;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.btn:hover {
+    opacity: 0.85;
+    transition: all ease-in 0.15s;
+}
+

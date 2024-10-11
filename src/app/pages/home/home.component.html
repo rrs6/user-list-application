@@ -1,0 +1,23 @@
+<div class="container">
+    <h2 class="title">Todos os usuários</h2>
+    @if(!loading && !users.length) {
+        <div class="empty-msg">Não existem usuários cadastrados</div>
+    }
+    <ul class="list-user">
+        @for(user of users; track user.id) {
+            <li class="informations">
+                <div class="card-info">
+                    <p><span class="emphasis">Id:</span> {{user.id}}</p>
+                    <p><span class="emphasis">Nome:</span> {{ user.name }}</p>
+                    <p><span class="emphasis">Email:</span> {{ user.email }}</p>
+                    <p><span class="emphasis">ClassId:</span> {{user.classId}}</p>
+                </div>
+                <div class="buttons">
+                    <button class="btn delete" (click)="deleteUser(user.id)">Deletar</button>
+                    <button class="btn edit" (click)="editUser(user.id)">Editar</button>
+                </div>
+            </li>
+        }
+    </ul>
+    <button class="create-user-btn" (click)="createNewUser()">Criar Novo Usuário</button>
+</div>

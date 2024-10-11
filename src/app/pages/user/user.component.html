@@ -1,0 +1,22 @@
+<div>
+    <h1 class="title">{{title}}</h1>
+    <form id="form" [formGroup]="userForm" (ngSubmit)="onSubmit()">
+       <div class="field-container">
+            <label for="name">Nome</label>
+            <input class="inpt-field" id="name" formControlName="name" type="text">
+       </div>
+       <div class="field-container">
+            <label for="name">Email</label>
+            <input class="inpt-field" id="email" formControlName="email" type="email">
+       </div>
+        <div class="field-container">
+            <label for="name">Classe</label>
+            <select class="select-inpt" id="class" formControlName="classs">
+            @for(class of classes; track class.id) {
+                <option [value]="class.id">{{class.name}}</option>
+            }
+            </select>
+       </div>
+       <button type="submit" [disabled]="!userForm.valid" class="btn">{{btnTitle}}</button>
+    </form>
+</div>
